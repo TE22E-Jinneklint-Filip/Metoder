@@ -9,7 +9,6 @@ public class Main {
         RightTriangleArea(2.0, 4.0);
         Cirkel(6.5);
 
-        // Call GetChoice with a String array of options
         String[] options = {"Hej", "Hey", "Hi"};
         GetChoice(options);
     }
@@ -59,12 +58,10 @@ public class Main {
     }
 
     public static int GetChoice(String[] get) {
-        // Present the options to the user
         for (int i = 0; i < get.length; i++) {
             System.out.println((i + 1) + ". " + get[i]);
         }
 
-        // Get user's choice
         int choice;
         do {
             System.out.print("Välj ett alternativ: ");
