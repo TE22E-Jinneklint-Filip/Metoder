@@ -36,7 +36,7 @@ public class Main {
     }
 
     public static Double Cirkel(Double radie) {
-        return radie * 3.14;
+        return radie * radie * 3.14;
     }
 
     public static int GetNumberInput() {
