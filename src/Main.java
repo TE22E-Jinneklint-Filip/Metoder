@@ -8,9 +8,7 @@ public class Main {
         Multi(0.1, 0.2);
         RightTriangleArea(2.0, 4.0);
         Cirkel(6.5);
-
-        String[] options = {"Hej", "Hey", "Hi"};
-        GetChoice(options);
+        GetChoice();
     }
 
     public static void Hello32() {
@@ -57,17 +55,25 @@ public class Main {
         return number;
     }
 
-    public static int GetChoice(String[] get) {
-        for (int i = 0; i < get.length; i++) {
-            System.out.println((i + 1) + ". " + get[i]);
+    public static void GetChoice() {
+        String[] val = {"Hej", "Hey", "Hi"};
+        int svar = 0;
+        while (true) {
+            for (int i = 0; i < val.length; i++) {
+                System.out.println((i + 1) + ". " + val[i]);
+            }
+            System.out.println("Välj ett tal mellan 1-3");
+
+            svar = GetNumberInput();
+
+            if (svar >= 1 && svar <= 3) {
+                break;
+
+            } else {
+
+            }
+
         }
-
-        int choice;
-        do {
-            System.out.print("Välj ett alternativ: ");
-            choice = GetNumberInput();
-        } while (choice < 1 || choice > get.length);
-
-        return choice;
+        System.out.println(val[svar - 1]);
     }
 }
