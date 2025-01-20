@@ -3,12 +3,14 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        String[] val = {"Hej", "Hey", "Hi"};
+
         Hello32();
         Kvadraten(2);
         Multi(0.1, 0.2);
         RightTriangleArea(2.0, 4.0);
         Cirkel(6.5);
-        GetChoice();
+        GetChoice(val);
     }
 
     public static void Hello32() {
@@ -22,15 +24,15 @@ public class Main {
         System.out.println("Kvadraten av " + en + " är: " + kvadrat);
     }
 
-    public static Double Multi(Double ett, Double två) {
-        Double skibidi = ett * två;
-        return skibidi;
+    public static void Multi(Double ett, Double två) {
+        System.out.println(ett * två);
+
 
     }
 
-    public static Double RightTriangleArea(Double base, Double height) {
+    public static void RightTriangleArea(Double base, Double height) {
 
-        return (base * height) / 2;
+        System.out.println((base * height) / 2);
     }
 
     public static Double Cirkel(Double radie) {
@@ -55,8 +57,7 @@ public class Main {
         return number;
     }
 
-    public static void GetChoice() {
-        String[] val = {"Hej", "Hey", "Hi"};
+    public static void GetChoice(String[] val) {
         int svar = 0;
         while (true) {
             for (int i = 0; i < val.length; i++) {
