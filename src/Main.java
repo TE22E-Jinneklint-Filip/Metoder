@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        String[] val = {"Hej", "Hey", "Hi"};
+        String[] val = {"Hej", "Hey", "Hi","haj","skibidi"};
 
         Hello32();
         Kvadraten(2);
@@ -63,11 +63,11 @@ public class Main {
             for (int i = 0; i < val.length; i++) {
                 System.out.println((i + 1) + ". " + val[i]);
             }
-            System.out.println("Välj ett tal mellan 1-3");
+            System.out.println("Välj ett tal mellan 1-" + val.length);
 
-            svar = GetNumberInput();
+            svar = GetNumberInput()-1;
 
-            if (svar >= 1 && svar <= 3) {
+            if (svar >= 0 && svar <= val.length) {
                 break;
 
             } else {
@@ -75,6 +75,6 @@ public class Main {
             }
 
         }
-        System.out.println(val[svar - 1]);
+        System.out.println(val[svar]);
     }
 }
